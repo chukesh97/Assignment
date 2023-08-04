@@ -466,6 +466,9 @@ h5{
 .testimonials-box{
     margin:-4vh;
     padding: 6vh;
+    border-style: ridge;
+    border-color: #6000ff1a;
+    border-radius: 24px;
 }
 .testimonials-cont{
     display: flex;
