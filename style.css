@@ -5,9 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 header{
+    width: 100%;
+    height: 10vh;
     display: flex;
     align-items: center;
-    height: 9vh;
     justify-content: space-between;
 }
 body {
@@ -20,11 +21,11 @@ body {
 .navbar{
     display: flex;
     width: 100%;
-    position: relative;
-    height: 60px;
+    position: fixed;
     align-items: center;
     justify-content: flex-end;
     background-color: #fff;
+    z-index: 1;
 }
 .logo{
     display: flex;
@@ -32,13 +33,13 @@ body {
     font-weight: 700;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     height: 42px;
     width: 41px;
     border-radius:15px;
     margin-left: 21px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
 }
 .nav_items{
     display: flex;
@@ -55,6 +56,8 @@ body {
     margin-right: 23px;
     margin-top:6px;
     padding: 10px;
+    border: none;
+    outline: none;
     border-radius: 26px;
     overflow: hidden;   
 
@@ -90,45 +93,92 @@ a:hover {
 .dropdown_menu{
     display: none;
     position: absolute;
-    top: 60px;
+    height: 100vh;
+    top: 100%;
+    right: 0;
     width: 40%;
     font-size: xx-large;
-    background: var(--primary-main, #301E4E);
-    background-color: #c4a6a6;
+    background: linear-gradient(#ffffffe1,#301E4E ) 
+    
+}
+.dropdown_menu.show {
+    display: block;
+}
+.dropdown_menu ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 4rem 0;
 }
 .dropdown_menu li{
-    padding: 16px;
+    width: 100%;
+    margin: 10px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s ease;
+}
+.dropdown_menu li:hover{
+    background-color: #301E4E;
+    color: #fff;
+    border-radius:5px;
+    transition: 0.3s ease;
+}
+.dropdown_menu li>a{
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px;
+}
+.dropdown_menu li a:hover{
+    color: #fff;
+    background-color: #301e4e18;
+    border-radius:5px;
+    transition: 0.3s ease;
 }
 .book-audit{
     display: flex;
-padding: 20px 36px;
-align-items: flex-start;
-border-radius: 12px;
-background: var(--secondary-main, #FF6E6C);
-gap: 10px;
+    padding: 20px 36px;
+    align-items: flex-start;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: var(--secondary-main, #FF6E6C);
+    gap: 10px;
+}
+
+.Body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-main, #F7F7F7);
+    width: 100%;
+    overflow-x: hidden;
 }
 .bg-img{
     background-image: url(Frame\ 63.jpg);
     position:relative;
-    margin-top:2px;
-    width: 1349px;
-    height: 800px;
-    flex-shrink: 0;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    object-fit: cover;
     align-items:center;
     display: inline-flex;
     
     
 }
 .box{
-    position: relative;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    margin-top: 71px;
-    width: 736px;
-    height: 520px;
     padding: 32px 26px 32px 72px;
     background: rgba(255, 255, 255, 0.44);
 
@@ -239,7 +289,6 @@ h5{
     flex-shrink: 0;
     height: 675.541px;
     margin-top: 10px;
-    z-index: -1;
 }
 .svg-cont{
     color: var(--primary-main, #301E4E);
@@ -388,8 +437,10 @@ h5{
     gap: 24px
 }
 .partners{
-   margin: 30px;
-   padding-top:20vh;
+    width:100% ;
+}
+.partners-images{
+    width: 100%;
    
 }
 .partners-cont{
@@ -422,16 +473,15 @@ h5{
 }
 .partners-img-1{
     display: flex;
-    width: 1299px;
-    margin-top:10vh;
-    padding: 30px;
+    width: 100%;
+    margin-top: 10vh;
+    padding: 50px;
     justify-content: space-between;
     align-items: flex-start;
 }
 .partners-img-cont{
     color: var(--text-color-light-primary-text, #1F1235);
     text-align: center;
-    margin-top:-67px;
     font-family: Playfair Display;
     font-size: 35px;
     font-style: normal;
@@ -441,9 +491,9 @@ h5{
 }
 .partners-img-2{
     display: flex;
-    width: 1299px;
-    margin-top:10vh;
-    padding: 30px;
+    width: 100%;
+    margin-top: 10vh;
+    padding: 50px;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -550,11 +600,14 @@ h5{
 #chat-link:hover{
     color: var(--primary-main,#FFF);
 }
+
+
+/* .........................FOOTER..................................... */
 .footer{
     background: var(--primary-main, #301E4E);
     display: flex;
-    width: 1349px;
-    padding: 80px;
+    width: 100%;
+    padding: 5rem;
     margin-top: 10px;
     justify-content: space-between;
     align-items: flex-start;
@@ -595,40 +648,89 @@ h5{
 .footer-logo{
     padding: 3px 20px;
 }
-/* media query */
-@media (max-width: 992px){
-    .navbar .a{
-        display: none
+
+/* ........................................Media QUERy,........................... */
+@media screen and (max-width:480px) {
+   /* navigation bar */
+   #link{
+       display: none;
     }
- .navbar .toggle-btn{
-    display: block;
- }   
+    /* media for back-image */
+    .box{
+        width: 80%;
+        height: 60%;
+        padding: 32px 26px 32px 32px;
+    }
+    .box>h1{
+        font-size: 60px;
+    }
+    .box>h3{
+        font-size: 25px;
+    }
+
+    /* media for footer */
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem;
+    }
+    .footer-logo{
+        margin-bottom: 1rem;
+    }
+    .footer-link > ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
-/* When the screen is less than 600 pixels wide, hide all links,
- except for the first one ("Home"). Show the link that contains
-  should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon {
-      float: right;
-      display: block;
+@media (min-width:481px) and (max-width:768px){
+     /* media for back-image */
+     .box{
+        width: 60%;
+        height: 70%;
+        padding: 32px 40px 32px 20px;
     }
-  }
-  
-  /* The "responsive" class is added to the topnav with
-   JavaScript when the user clicks on the icon. 
-   This class makes the topnav look good on small screens 
-   (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    .box>h1{
+        font-size: 65px;
     }
-    .navbar.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+    .box>h3{
+        font-size: 30px;
     }
-  }
+    
+    /* media for footer */
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+    .footer-logo{
+        margin-bottom: 1rem;
+    }
+    .footer-link > ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+}
+@media (min-width:769px) and (max-width:1024px){
+    /* media for footer */
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+    .footer-logo{
+        margin-bottom: 1rem;
+    }
+    .footer-link > ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+}

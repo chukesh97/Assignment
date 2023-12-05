@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"crossorigin="anonymous"></script>
-  
-  <title>Responsive </title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <title>Landing Page </title>
   </head>
 <body>
    <!--====== Header Section Start ======-->
@@ -24,22 +27,23 @@
                   <li><a id="link"href="#">Contact</a></li>
                   <li><a id="link" href="#">Work</a></li>
 			    </ul>
-            <div class="toggle-btn" id="toggle-btn" onclick="myfunction()">
+            <button class="toggle-btn">
               <img src="menu.png">
-            </div>
+            </button>
             </div>
             <!-- sidebar toggle-btn -->
-            <div class="dropdown_menu" id="dropdown_menu">           
+            <div class="dropdown_menu animate__animated animate__fadeInRight ">           
               <ul>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Blogs</a></li>
                   <li><a href="#">Contact Us</a></li>
-                  <li><button class="book-audit">BOOK AN FREE MARKETING ADUIT</button></li>
+                  <button class="book-audit">BOOK AN FREE MARKETING ADUIT</button>
               </ul>
             </div>
 		</nav>
     </header>
+<div class="Body">    
     <!-- ==== Intro Section Start ==== -->
 	<section class="bg-img">
         <div class="box">
@@ -127,22 +131,30 @@
         <h4 class="partners-cont-2">Your success is our success.
         </h4>
       </div>
+      <div class="partners-images">
       <div class="partners-img-1">
         <img src="partners-1.png" id="partners-1">
         <img src="partners-2.png" id="partners-2">
-        <img src="partners-3.png" id="partners-3">
+        <div class="partners-img-3">
+          <img src="partners-3.png" id="partners-3">
+          <h4 class="partners-img-cont">PWA</h4>
+          </div>
         <img src="partners-4.png" id="partners-4">
         <img src="partners-5.png" id="partners-5">
       </div>
-      <h4 class="partners-img-cont">PWA</h4>
+
       <div class="partners-img-2">
         <img src="partners-1.png" id="partners-1">
         <img src="partners-2.png" id="partners-2">
+        <div class="partners-img-3">
         <img src="partners-3.png" id="partners-3">
+        <h4 class="partners-img-cont">PWA</h4>
+        </div>
         <img src="partners-4.png" id="partners-4">
         <img src="partners-5.png" id="partners-5">
       </div>
-      <h4 class="partners-img-cont">PWA</h4>
+      
+    </div>
     </section>
     <!-- ==== Partners Section End ==== -->
     <br><br><br><br>
@@ -175,7 +187,8 @@
         <h1 class="chat-cont">Looking to drive <br>results?
         <a href="#" id="chat-link">Lets chat</a></a></h1>
       </div>
-    <!-- ==== Footer Section Start ==== -->
+</div    
+    <!-- ........ Footer Section Start ....... -->
     <footer class="footer">
         <h4 class="footer-logo">Logo</h4>
         <div class="footer-link">           
@@ -208,6 +221,9 @@
         </svg>
         </span>  
     </footer>
+
+    <!-- ........ Script ....... -->
+    <script src="script.js"crossorigin="anonymous"></script>
 </body>
 </html>  
            
