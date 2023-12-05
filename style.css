@@ -209,7 +209,7 @@ h3{
 .box-2{
     margin-left: 60px;
 }
-h5{
+.about>h5{
     color: var(--background-main-dark, #463366);
     font-family: Playfair Display;
     font-size: 25px;
@@ -218,10 +218,10 @@ h5{
     line-height: normal;
     
 }
-.abt{
+.about>h1{
     color: var(--background-main-dark, #463366);
 }
-.abt-cont{
+.about>h4{
     color: #494949;
     font-family: Source Sans Pro;
     font-size: 35px;
@@ -229,25 +229,27 @@ h5{
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.088px;
+    padding: 25px;
 }
 .book-audit-2{
     background: var(--primary-main, #301E4E);
-    display: flex;
+    border: none;
+    outline: none;
     border-radius: 12px;
     padding: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
     color: #FFF;
     font-family: Source Sans Pro;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     letter-spacing: 0.25px;
     text-transform: uppercase;
 }
 .content{
-  display: flex;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 .about-ryt{
     display: flex;
@@ -256,7 +258,6 @@ h5{
     justify-content:space-around;
     color: var(--primary-main, #301E4E);
     margin-top: 84px;
-    margin-left:45px;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -285,7 +286,7 @@ h5{
 .about-lft{
     display:flex;
     flex-wrap: wrap;
-    width: 762.908px;
+    width: 700px;
     flex-shrink: 0;
     height: 675.541px;
     margin-top: 10px;
@@ -313,6 +314,7 @@ h5{
     font-family: Source Sans Pro;
 }
 .work{
+    width: 100% ;
     background: var(--primary-main, #301E4E);
     padding-bottom:15px;
 }
@@ -328,39 +330,85 @@ h5{
 }
 .view-2{
     background: var(--secondary-main, #FF6E6C);
-    display: flex;
+    border: none;
+    outline: none;
     border-radius: 12px;
-    margin-left:30px;
+    margin-left:35px;
     padding: 20px 36px;
-    align-items: flex-start;
     gap: 10px;
     color: #FFF;
     font-family: Source Sans Pro;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.25px;
     text-transform: uppercase;
 }
-.work-row-1{
-     display: inline-flex;
-     flex-wrap: wrap;
-     margin-top:20px;
-     margin-left:30px; 
+.Work-container{
+    width: 98%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
-#work-1{
-    width: 636px;
-    height: 704px;
-    padding: 7px;
-
-}
-.work-row-1-cont-1{
+.starbucks{
     display: flex;
     flex-direction: column;
-    margin: -11px 0px 4px 38px;
-    gap: 24px;
+    gap: 1rem;   
+
 }
+.starbucks>img{
+    width: 610px;
+    height: 704px;
+}
+.starbucks>h3{
+    color: var(--primary-lighter, #E7D7F6);
+    font-family: Playfair Display;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+}
+.starbucks>h4{
+    color: var(--text-color-dark-main, #FFF);
+    font-family: Source Sans Pro;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.088px;
+}
+.nike{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+
+}
+.nike>img{
+    width: 600px;
+    height: 478px;
+}
+.nike>h3{
+    color: var(--primary-lighter, #E7D7F6);
+    font-family: Playfair Display;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+}
+.nike>h4{
+    color: var(--text-color-dark-main, #FFF);
+    font-family: Source Sans Pro;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.088px;
+}
+
+
+
 #dg-mrk{
     color: var(--secondary-main, #FF6E6C);
     font-family: Source Sans Pro;
@@ -370,72 +418,8 @@ h5{
     line-height: normal;
     letter-spacing: 0.085px;
 }
-.star{
-    color: var(--primary-lighter, #E7D7F6);
-    font-family: Playfair Display;
-    font-size: 49px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;  
-}
-.star-cont{
-    color: var(--text-color-dark-main, #FFF);
-    font-family: Source Sans Pro;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.088px;
-}
-.work-row-1-cont-2{
-    display: flex;
-    flex-direction: column;
-    margin: -435px 0px 4px 677px;
-    gap: 24px
-}
-.nike{
-    color: var(--primary-lighter, #E7D7F6);
-    font-family: Playfair Display;
-    font-size: 49px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;  
-}
-.nike-cont{
-    color: var(--text-color-dark-main, #FFF);
-    font-family: Source Sans Pro;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.088px;
-}
-.row-2{
-    margin-top:38vh;
-}
-#work-2{
-    width: 636px;
-    height: 478px;
-    padding:7px;
-}
-.work-row-2{
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin-top:20px;
-    margin-left:30px;
-}
-.work-row-2-cont-1{
-    display: flex;
-    flex-direction: column;
-    margin: -227px 0px 4px 38px;
-    gap: 24px
-}
-.work-row-2-cont-2{
-    display: flex;
-    flex-direction: column;
-    margin: 19px 0px 4px 674px;
-    gap: 24px
-}
+
+/* ........partners................... */
 .partners{
     width:100% ;
 }
@@ -573,7 +557,7 @@ h5{
 .chat{
     background: var(--primary-main, #301E4E);
     display: flex;
-    width: 1349px;
+    width: 100%;
     padding: 72px 10px 72px 72px;
     align-items: flex-start;
     gap: 10px;
